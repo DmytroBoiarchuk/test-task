@@ -1,5 +1,5 @@
 export async function fetchSecondApi(setChats) {
-  const response = await fetch("https://aclean-52e2f83f8d01.herokuapp.com/shpp-first");
+  const response = await fetch("/api3/shpp-zero");
   const newChat = await response.json();
   const resultChat = transformChatData(newChat);
 
@@ -12,7 +12,7 @@ export async function fetchSecondApi(setChats) {
   });
 }
 export async function fetchFirstApi(setChats) {
-  const response = await fetch("https://aclean-52e2f83f8d01.herokuapp.com");
+  const response = await fetch("/api1/shpp-zero");
   const newChat = await response.json();
   const resultChat = {
     chat_id: 2,
@@ -37,7 +37,7 @@ export async function fetchFirstApi(setChats) {
   });
 }
 export async function fetchThirdApi(setChats) {
-  const response = await fetch("https://aclean-52e2f83f8d01.herokuapp.com/shpp-second");
+  const response = await fetch("/api2/shpp-zero");
   const newChat = await response.json();
 
   setChats((prevState) => {
